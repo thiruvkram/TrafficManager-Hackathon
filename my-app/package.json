@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --disableHostCheck --host 0.0.0.0 --port 80",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -23,7 +23,7 @@
     "@clr/icons": "^2.1.0",
     "@clr/ui": "^2.1.0",
     "@webcomponents/custom-elements": "^1.0.0",
-    "rxjs": "~6.4.0",
+    "rxjs": "~6.5.2",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
   },
