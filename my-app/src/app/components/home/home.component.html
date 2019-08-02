@@ -12,7 +12,7 @@
                 </button>
                 <clr-dropdown-menu *clrIfOpen clrPosition="bottom-right">
                     <a href="..." clrDropdownItem>About</a>
-                    <a href="..." clrDropdownItem>Preferences</a>
+                    <a href="javascript://" (click)="getLocation()" clrDropdownItem>Preferences</a>
                     <a href="javascript://" (click)="logout()" clrDropdownItem>Log out</a>
                 </clr-dropdown-menu>
             </clr-dropdown>
@@ -23,6 +23,20 @@
         <main class="content-area">
             All the content 
         </main>
+        <button [clrLoading]="validateBtnState" class="btn btn-info-outline" (click)="getCurrentLocation()">Validate</button>
+
+
+        <clr-modal [(clrModalOpen)]="basic" >
+    <h3 class="modal-title">New User Registration</h3>
+    <div class="modal-body">
+        <p>Latitude : {{latitude}}</p>
+        <p>longitude : {{longitude}}</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline" (click)="basic = false">Cancel</button>
+        <button type="button" class="btn btn-primary" (click)="basic = false">Ok</button>
+    </div>
+</clr-modal>
         
 
     </div>
